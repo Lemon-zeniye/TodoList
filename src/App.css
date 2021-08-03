@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
-}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: rgb(205, 223, 230);
+}
+.app {
+  border: 1px solid black;
+  width: 25rem;
+  margin-top: 25px;
+  background-color: white;
+  position: relative;
+  border-radius: 5px;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(196, 193, 193);
+  padding: 5px;
+  color:rgb(28, 166, 212);
+}
+nav div button {
+  padding: 6px;
+  background-color: rgb(28, 166, 212);
+  border: none;
+  border-radius: 3px;
+  outline: none;
   color: white;
+  margin: 2px;
+}
+nav div select {
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  width: 70px;
 }
 
-.App-link {
-  color: #61dafb;
+nav div select option[value="all"] {
+  color: rgb(146, 40, 245);
+}
+nav div select option[value="completed"] {
+  color: rgb(35, 212, 35);
+}
+nav div select option[value="uncompleted"] {
+  color: rgb(252, 7, 7);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+label {
+  display: block;
+  font-family:cursive;
+  margin-top: 3px;
+}
+label[class="reminder"] {
+  display:flex;
+  padding-top: 10px;
+  justify-content: space-around;
+}
+form {
+  width: 100%;
+  background-color: white;
+}
+input[type="text"] {
+  padding: 7px;
+  width: 90%;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+  padding-bottom: 4px;
+  font-size: large;
+}
+input[type="submit"] {
+  width: 50%;
+  padding: 7px;
+  background-color: rgb(42, 153, 228);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+@media screen and (max-width: 400px) {
+  .app {
+  width: 18rem;
   }
-  to {
-    transform: rotate(360deg);
+  form {
+    width: 18rem;
   }
+}
+
+
+
+/* style for todo-list */
+
+.todoList-div {
+  overflow:hidden;
+  min-height: 10vh;
+}
+
+footer {
+  text-align: center;
+  background-color: rgb(189, 196, 199);
+  font-family:cursive;
+  margin-top: 15px;
+}
+.checked  {
+  border-bottom: 2px solid green;
+  border-left: 2px solid green;
+}
+.todo-div {
+  display: flex;
+  justify-content: space-between;
+  font-family: cursive;
+  background-color: rgb(242, 247, 250);
+  padding: 5px;
+  border-radius: 5px;
+  margin: 6px 1px 3px 2px;
+  cursor: pointer;
 }
