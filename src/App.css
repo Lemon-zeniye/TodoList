@@ -4,129 +4,53 @@
   box-sizing: border-box;
 
 }
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(205, 223, 230);
-}
-.app {
-  border: 1px solid black;
-  width: 25rem;
-  margin-top: 25px;
-  background-color: white;
-  position: relative;
-  border-radius: 5px;
 
-}
 
-nav {
+nav  {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(196, 193, 193);
+  background-color: gray;
   padding: 5px;
-  color:rgb(28, 166, 212);
+  color: lightblue;
 }
-nav div button {
-  padding: 6px;
-  background-color: rgb(28, 166, 212);
-  border: none;
-  border-radius: 3px;
-  outline: none;
-  color: white;
-  margin: 2px;
+nav div {
+  display: flex;
 }
-nav div select {
-  padding: 5px;
-  border-radius: 3px;
-  border: none;
-  outline: none;
-  width: 70px;
+nav div li {
+  list-style: none;
+  padding: 7px;
 }
 
-nav div select option[value="all"] {
-  color: rgb(146, 40, 245);
+img {
+  width: 15rem;
+  height: 17rem;
+  border-radius: 15px 15px 0 0;
 }
-nav div select option[value="completed"] {
-  color: rgb(35, 212, 35);
-}
-nav div select option[value="uncompleted"] {
-  color: rgb(252, 7, 7);
-}
-
-label {
-  display: block;
-  font-family:cursive;
-  margin-top: 3px;
-}
-label[class="reminder"] {
-  display:flex;
-  padding-top: 10px;
+.citylist{
+  margin: 3% 7%;
+  display: flex;
   justify-content: space-around;
+  flex-wrap:wrap-reverse;
 }
-form {
-  width: 100%;
-  background-color: white;
-}
-input[type="text"] {
-  padding: 7px;
-  width: 90%;
-  margin-left: 10px;
-  border: none;
-  outline: none;
-  border-radius: 5px;
-  border-bottom: 1px solid black;
-  padding-bottom: 4px;
-  font-size: large;
-}
-input[type="submit"] {
-  width: 50%;
-  padding: 7px;
-  background-color: rgb(42, 153, 228);
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin-top: 15px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-left: 5px;
-}
-@media screen and (max-width: 400px) {
-  .app {
-  width: 18rem;
-  }
-  form {
-    width: 18rem;
-  }
-}
+.city-div div {
+  border-radius: 15px 15px 0 0;
+  background-color: rgb(231, 236, 241);
+  padding-bottom: 25px;
+  margin: 10px;
+  width: 15rem;
 
-
-
-/* style for todo-list */
-
-.todoList-div {
-  overflow:hidden;
-  min-height: 10vh;
 }
-
-footer {
-  text-align: center;
-  background-color: rgb(189, 196, 199);
-  font-family:cursive;
-  margin-top: 15px;
+.city-div div li {
+  list-style: none;
+  font-weight: bold;
 }
-.checked  {
-  border-bottom: 2px solid green;
-  border-left: 2px solid green;
+.city-div div h3 {
+  font-family:'Lucida Sans';
+  color:rgb(77, 150, 223); 
 }
-.todo-div {
-  display: flex;
-  justify-content: space-between;
-  font-family: cursive;
-  background-color: rgb(242, 247, 250);
-  padding: 5px;
-  border-radius: 5px;
-  margin: 6px 1px 3px 2px;
+.delete {
+  position: absolute;
+  margin-left: 14rem;
+  margin-top: 5px;
   cursor: pointer;
 }
